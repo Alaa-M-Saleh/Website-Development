@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Development HTML/CSS Project</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .album-container:hover {
+                transform: none;
+            }
+            .album-container {
+                margin-top: 10px;
+            }
+            .album-grid {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto auto;
+                gap: 20px;
+                justify-content: space-evenly;
+                align-content: space-between;
+            }
+            .album-item img{
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .album-item img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            }
+            .album-item {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="topic">
+            <h1>Album</h1>
+        </div>
+        <div class="content album-container">
+            <div class="tag">Album</div>
+            <div class="album-grid">
+
+
+                <div class="album-item">
+                    <p>Description of image 1.</p><br>
+                    <p>Description of image 1.</p><br>
+                    <p>Description of image 1.</p><br>
+                    <p>Description of image 1.</p><br>
+                    <p>Description of image 1.</p><br>
+                </div>
+                <div class="album-item">
+                    <img src="image1.jpg" alt="image 1">
+                </div>
+
+
+                <div class="album-item">
+                    <img src="image2.jpg" alt="image 2">
+                </div>
+                <div class="album-item">
+                    <p>Description of image 2.</p><br>
+                    <p>Description of image 2.</p><br>
+                    <p>Description of image 2.</p><br>
+                    <p>Description of image 2.</p><br>
+                    <p>Description of image 2.</p><br>
+                </div>
+
+
+                <div class="album-item">
+                    <p>Description of image 3.</p><br>
+                    <p>Description of image 3.</p><br>
+                    <p>Description of image 3.</p><br>
+                    <p>Description of image 3.</p><br>
+                    <p>Description of image 3.</p><br>
+                </div>
+                <div class="album-item">
+                    <img src="image3.jpg" alt="image 3">
+                </div>
+
+
+            </div>
+
+        </div>
+        <footer>
+            <div class="content">
+                <div class="tag">v1</div>
+                    <p>&copy; 2026 Web Development Project. All rights reserved.</p>
+                    <ul>
+                        <li><a href="Privacy Policy.html" class="link">Privacy Policy</a></li>
+                        <li><a href="Return Policy.html" class="link">Return Policy</a></li>
+                        <li><a href="Terms and Conditions.html" class="link">Terms and Conditions</a></li>
+                    </ul>
+            </div>
+        </footer>
+    </body>
+
+</html>

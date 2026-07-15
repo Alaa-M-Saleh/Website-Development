@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Development HTML/CSS Project</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .faq-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            details {
+                background-color: var(--bg-primary);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                border-radius: 8px;
+                padding: 15px 20px;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            details[open] {
+                border-color: var(--accent-color);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            summary {
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: var(--text-main);
+                cursor: pointer;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                outline: none;
+            }
+
+            summary::after {
+                content: "+";
+                color: var(--accent-color);
+                font-size: 1.3rem;
+                font-weight: bold;
+                transition: transform 0.3s ease;
+            }
+
+            details[open] summary::after {
+                content: "−";
+                transform: rotate(180deg);
+            }
+
+            .faq-answer {
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+                color: var(--text-muted);
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="topic">
+            <h1>FAQ</h1>
+        </div>
+        <main class="home-content">
+            <div class="main-left">
+                <section class="card">
+                    <div class="content">
+                        <span class="tag">Help</span>
+                        <h2>General Questions</h2>
+                        <p>Click on any question below to expand and reveal the answer.</p>
+                        
+                        <div class="faq-container">
+                            <details>
+                                <summary>What is the purpose of this website?</summary>
+                                <div class="faq-answer">
+                                    <p>This website is a multi-page front-end development project built to showcase clean HTML5 markup, responsive CSS3 styling, and intuitive layout structures without relying on bulky frameworks.</p>
+                                </div>
+                            </details>
+
+                            <details>
+                                <summary>Is this website fully responsive on mobile devices?</summary>
+                                <div class="faq-answer">
+                                    <p>Yes! The entire structure is built using flexible Flexbox layouts and CSS media queries. It adapts seamlessly to desktop monitors, tablets, and smartphones.</p>
+                                </div>
+                            </details>
+
+                            <details>
+                                <summary>Can I use this code for my own web projects?</summary>
+                                <div class="faq-answer">
+                                    <p>Absolutely. Feel free to copy, modify, and expand upon this codebase for your own personal projects, assignments, or portfolios.</p>
+                                </div>
+                            </details>
+
+                            <details>
+                                <summary>What technologies are used in this project?</summary>
+                                <div class="faq-answer">
+                                    <p>This project relies strictly on semantic HTML5 for structure and CSS3 variables, transitions, and layout engines (Flexbox) for styling and interactive animations.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="card sidebar">
+                <div class="content">
+                    <span class="tag">Support</span>
+                    <h2>Still Have Questions?</h2>
+                    <p>
+                        If your question wasn't answered in our FAQ list, don't worry! I'm always happy to help clarify things.
+                    </p>
+                    <p>
+                        You can send me a direct message by filling out the form on our contact page.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        <a href="Contact.html" class="link">Go to Contact Page &rarr;</a>
+                    </p>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <div class="content">
+                <div class="tag">v1</div>
+                    <p>&copy; 2026 Web Development Project. All rights reserved.</p>
+                    <ul>
+                        <li><a href="Privacy Policy.html" class="link">Privacy Policy</a></li>
+                        <li><a href="Return Policy.html" class="link">Return Policy</a></li>
+                        <li><a href="Terms and Conditions.html" class="link">Terms and Conditions</a></li>
+                    </ul>
+            </div>
+        </footer>
+    </body>
+
+</html>

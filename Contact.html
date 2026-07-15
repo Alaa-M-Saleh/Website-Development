@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Development HTML/CSS Project</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            form {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+                gap: 15px;
+                align-items: start;
+            }
+            form .btn-submit {
+                grid-column: 1 / span 2;
+                justify-self: center;
+                margin-top: 10px;
+            }
+            form .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+            form .form-group label {
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            form .form-group input,
+            form .form-group textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1rem;
+                width: 100%;
+            }
+            form .form-group:nth-of-type(1),
+            form .form-group:nth-of-type(2),
+            form .form-group:nth-of-type(3) {
+                grid-column: 1;
+            }
+            form .message-group {
+                grid-column: 2;
+                grid-row: 1 / span 3;
+                height: 100%;
+            }
+            form .message-group textarea {
+                resize: vertical;
+                min-height: 220px;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="topic">
+            <h1>Contact</h1>
+        </div>
+        <main class="home-content">
+            <div class="main-left">
+                <section class="card">
+                    <div class="content">
+                        <span class="tag">Message</span>
+                        <h2>Send a Message</h2>
+                        <p>Have questions, feedback, or a project in mind? Drop me a line using the form below and I will get back to you as soon as possible.</p>
+                        
+                        <form action="#" method="POST" style="margin-top: 20px;">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="How can I help you?" required>
+                            </div>
+                            
+                            <div class="form-group message-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit btn">Send Message</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="card sidebar">
+                <div class="content">
+                    <span class="tag">Details</span>
+                    <h2>Contact Information</h2>
+                    <p>Feel free to reach out directly using any of the direct methods below:</p>
+                    
+                    <ul class="contact-meta" style="list-style: none;">
+                        <li><strong>📍 Location:</strong> Westbank, Palestine</li>
+                        <li><strong>✉️ Email:</strong> <a href="mailto:alaa.majdi.saleh@gmail.com" class="link">alaa.majdi.saleh@gmail.com</a></li>
+                        <li><strong>📞 Phone:</strong> +970597806379</li>
+                    </ul>
+
+                    <p style="margin-top: 25px;">
+                        Want to see my past work first? Take a look at the <a href="Portfolio.html" class="link">Portfolio Page</a>.
+                    </p>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <div class="content">
+                <div class="tag">v1</div>
+                    <p>&copy; 2026 Web Development Project. All rights reserved.</p>
+                    <ul>
+                        <li><a href="Privacy Policy.html" class="link">Privacy Policy</a></li>
+                        <li><a href="Return Policy.html" class="link">Return Policy</a></li>
+                        <li><a href="Terms and Conditions.html" class="link">Terms and Conditions</a></li>
+                    </ul>
+            </div>
+        </footer>
+    </body>
+
+</html>
