@@ -349,6 +349,7 @@ textarea {
   z-index: 30;
 }
 
+
 .modal.show {
   display: flex;
 }
@@ -574,14 +575,6 @@ textarea {
 /* ===== RTL support (Arabic) ===== */
 html[dir="rtl"] body {
   font-family: "Tahoma", "Segoe UI", "Geneva", "Verdana", sans-serif;
-}
-
-html[dir="rtl"] .carousel-control.prev {
-  order: 2;
-}
-
-html[dir="rtl"] .carousel-control.next {
-  order: 0;
 }
 
 html[dir="rtl"] .modal-close {
