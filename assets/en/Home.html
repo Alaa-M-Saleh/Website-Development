@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Studio | Home</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <span>Modern web experiences crafted with care</span>
+          <div class="top-bar-links">
+            <a href="tel:+970597806379">+970 597 806379</a>
+            <a href="mailto:alaa.majdi.saleh@gmail.com">alaa.majdi.saleh@gmail.com</a>
+            <a href="https://github.com/Alaa-M-Saleh" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alaa-m-saleh" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="container nav-inner">
+          <a class="brand" href="Home.html">Bright Studio</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+          <div class="nav-links" id="navLinks">
+            <a href="Home.html" class="active">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Blog.html">Blog</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+          </div>
+          <div class="nav-actions">
+            <a class="lang-link" href="../ar/Home.html">AR</a>
+            <button class="btn btn-primary small" id="openModalBtn">Get a Quote</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="modal" id="quoteModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Get a quote">
+        <button class="modal-close" id="closeModalBtn" aria-label="Close">×</button>
+        <h3>Request a quote</h3>
+        <form id="quoteForm">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Project details
+            <textarea name="details" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send request</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="container page-stack">
+      <section class="hero-grid">
+        <div class="card hero-card">
+          <p class="eyebrow">Creative digital studio</p>
+          <h2>We help brands feel clear, confident, and modern online.</h2>
+          <p>From thoughtful strategy to polished launch-ready pages, we build web experiences that turn ideas into trust.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="Services.html">Explore services</a>
+            <a class="btn" href="Portfolio.html">View portfolio</a>
+          </div>
+        </div>
+        <div class="hero-carousel card" aria-label="Project showcase">
+          <button class="carousel-control prev" id="carouselPrev" type="button" aria-label="Show previous image">‹</button>
+          <div class="carousel-slide">
+            <img id="heroCarouselImage" src="../images/image1.jpg" alt="Featured work preview" />
+            <p class="carousel-caption" id="heroCarouselCaption">Strategy and launch support</p>
+          </div>
+          <button class="carousel-control next" id="carouselNext" type="button" aria-label="Show next image">›</button>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="eyebrow">Popular services</p>
+              <div class="service-grid" id="servicesGrid"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="eyebrow">Fresh insights</p>
+              <div class="cards-stack" id="postsGrid"></div>
+            </div>
+          </div>
+        </div>
+        <aside class="sidebar-card">
+          <h3>What makes us different?</h3>
+          <p>We combine clean structure with a calm visual tone so the message feels easy to absorb.</p>
+          <ul class="feature-list">
+            <li>Content-led storytelling</li>
+            <li>Flexible, responsive layouts</li>
+            <li>Simple and reliable launch support</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Bright Studio</h3>
+          <p>Creating thoughtful websites for people who want to stand out with clarity and confidence.</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul class="footer-links">
+            <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+            <li><a href="Return Policy.html">Return Policy</a></li>
+            <li><a href="Terms and Conditions.html">Terms and Conditions</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>+970 597 806379<br />alaa.majdi.saleh@gmail.com</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/site-data.js"></script>
+    <script>
+      const homeCarouselSlides = [
+        { src: '../images/image1.jpg', caption: 'Strategy and launch support' },
+        { src: '../images/image2.jpg', caption: 'Polished visual storytelling' },
+        { src: '../images/image3.jpg', caption: 'Responsive digital experiences' }
+      ];
+      let homeCarouselIndex = 0;
+
+      function updateHomeCarousel() {
+        const image = document.getElementById('heroCarouselImage');
+        const caption = document.getElementById('heroCarouselCaption');
+        if (!image || !caption) return;
+        image.src = homeCarouselSlides[homeCarouselIndex].src;
+        image.alt = homeCarouselSlides[homeCarouselIndex].caption;
+        caption.textContent = homeCarouselSlides[homeCarouselIndex].caption;
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        populateServices('servicesGrid');
+        populatePosts('postsGrid');
+        initSiteInteractions();
+
+        const prevButton = document.getElementById('carouselPrev');
+        const nextButton = document.getElementById('carouselNext');
+
+        if (prevButton) {
+          prevButton.addEventListener('click', function() {
+            homeCarouselIndex = (homeCarouselIndex + homeCarouselSlides.length - 1) % homeCarouselSlides.length;
+            updateHomeCarousel();
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', function() {
+            homeCarouselIndex = (homeCarouselIndex + 1) % homeCarouselSlides.length;
+            updateHomeCarousel();
+          });
+        }
+
+        updateHomeCarousel();
+      });
+    </script>
+  </body>
+</html>

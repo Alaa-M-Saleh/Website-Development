@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>استوديو برايت | الرئيسية</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <span>تجارب ويب حديثة نصممها بعناية</span>
+          <div class="top-bar-links">
+            <a href="tel:+970597806379">+970 597 806379</a>
+            <a href="mailto:alaa.majdi.saleh@gmail.com">alaa.majdi.saleh@gmail.com</a>
+            <a href="https://github.com/Alaa-M-Saleh" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alaa-m-saleh" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="container nav-inner">
+          <a class="brand" href="Home.html">استوديو برايت</a>
+          <button class="nav-toggle" id="navToggle" aria-label="تبديل التنقل">☰</button>
+          <div class="nav-links" id="navLinks">
+            <a href="Home.html" class="active">الرئيسية</a>
+            <a href="Services.html">الخدمات</a>
+            <a href="Portfolio.html">أعمالنا</a>
+            <a href="Blog.html">المدونة</a>
+            <a href="About.html">من نحن</a>
+            <a href="Contact.html">تواصل معنا</a>
+          </div>
+          <div class="nav-actions">
+            <a class="lang-link" href="../en/Home.html">EN</a>
+            <button class="btn btn-primary small" id="openModalBtn">اطلب عرض سعر</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="modal" id="quoteModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="اطلب عرض سعر">
+        <button class="modal-close" id="closeModalBtn" aria-label="إغلاق">×</button>
+        <h3>طلب عرض سعر</h3>
+        <form id="quoteForm">
+          <label>
+            الاسم
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            البريد الإلكتروني
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            تفاصيل المشروع
+            <textarea name="details" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="container page-stack">
+      <section class="hero-grid">
+        <div class="card hero-card">
+          <p class="eyebrow">استوديو رقمي إبداعي</p>
+          <h2>نساعد العلامات التجارية على الظهور بوضوح وثقة وحداثة على الإنترنت.</h2>
+          <p>من التخطيط الاستراتيجي المدروس إلى صفحات جاهزة للإطلاق بحلة أنيقة، نبني تجارب ويب تحوّل الأفكار إلى ثقة.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="Services.html">استكشف الخدمات</a>
+            <a class="btn" href="Portfolio.html">استعرض أعمالنا</a>
+          </div>
+        </div>
+        <div class="hero-carousel card" aria-label="عرض المشاريع">
+          <button class="carousel-control prev" id="carouselPrev" type="button" aria-label="عرض الصورة السابقة">‹</button>
+          <div class="carousel-slide">
+            <img id="heroCarouselImage" src="../images/image1.jpg" alt="معاينة عمل مميز" />
+            <p class="carousel-caption" id="heroCarouselCaption">الاستراتيجية ودعم الإطلاق</p>
+          </div>
+          <button class="carousel-control next" id="carouselNext" type="button" aria-label="عرض الصورة التالية">›</button>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="eyebrow">الخدمات الأكثر طلباً</p>
+              <div class="service-grid" id="servicesGrid"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <p class="eyebrow">أحدث المقالات</p>
+              <div class="cards-stack" id="postsGrid"></div>
+            </div>
+          </div>
+        </div>
+        <aside class="sidebar-card">
+          <h3>ما الذي يميزنا؟</h3>
+          <p>نجمع بين البنية الواضحة والنبرة البصرية الهادئة حتى تكون الرسالة سهلة الاستيعاب.</p>
+          <ul class="feature-list">
+            <li>سرد محتوى موجه بالمضمون</li>
+            <li>تخطيطات مرنة ومتجاوبة</li>
+            <li>دعم إطلاق بسيط وموثوق</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>استوديو برايت</h3>
+          <p>نصنع مواقع ويب مدروسة لمن يريدون التميز بوضوح وثقة.</p>
+        </div>
+        <div>
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="Privacy Policy.html">سياسة الخصوصية</a></li>
+            <li><a href="Return Policy.html">سياسة الاسترجاع</a></li>
+            <li><a href="Terms and Conditions.html">الشروط والأحكام</a></li>
+            <li><a href="FAQ.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/site-data.js"></script>
+    <script>
+      const homeCarouselSlides = [
+        { src: '../images/image1.jpg', caption: 'الاستراتيجية ودعم الإطلاق' },
+        { src: '../images/image2.jpg', caption: 'سرد بصري أنيق' },
+        { src: '../images/image3.jpg', caption: 'تجارب رقمية متجاوبة' }
+      ];
+      let homeCarouselIndex = 0;
+
+      function updateHomeCarousel() {
+        const image = document.getElementById('heroCarouselImage');
+        const caption = document.getElementById('heroCarouselCaption');
+        if (!image || !caption) return;
+        image.src = homeCarouselSlides[homeCarouselIndex].src;
+        image.alt = homeCarouselSlides[homeCarouselIndex].caption;
+        caption.textContent = homeCarouselSlides[homeCarouselIndex].caption;
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        populateServices('servicesGrid');
+        populatePosts('postsGrid');
+        initSiteInteractions();
+
+        const prevButton = document.getElementById('carouselPrev');
+        const nextButton = document.getElementById('carouselNext');
+
+        if (prevButton) {
+          prevButton.addEventListener('click', function() {
+            homeCarouselIndex = (homeCarouselIndex + homeCarouselSlides.length - 1) % homeCarouselSlides.length;
+            updateHomeCarousel();
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', function() {
+            homeCarouselIndex = (homeCarouselIndex + 1) % homeCarouselSlides.length;
+            updateHomeCarousel();
+          });
+        }
+
+        updateHomeCarousel();
+      });
+    </script>
+  </body>
+</html>
