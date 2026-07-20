@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>استوديو برايت | تواصل معنا</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <span>تجارب ويب حديثة نصممها بعناية</span>
+          <div class="top-bar-links">
+            <a href="tel:+970597806379">+970 597 806379</a>
+            <a href="mailto:alaa.majdi.saleh@gmail.com">alaa.majdi.saleh@gmail.com</a>
+            <a href="https://github.com/Alaa-M-Saleh" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alaa-m-saleh" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="container nav-inner">
+          <a class="brand" href="Home.html">استوديو برايت</a>
+          <div class="btn-group">
+            <button class="btn-group-item active">CSS</button>
+            <button class="btn-group-item" onclick="document.location.href = '../../bootstrap-dual-lang-site/index.html';">BOOTSTRAP</button>
+            <button class="btn-group-item" onclick="document.location.href = '../../tailwind-dual-lang-site/index.html';">TAILWIND</button>
+          </div>
+          <button class="nav-toggle" id="navToggle" aria-label="تبديل التنقل">☰</button>
+          <div class="nav-links" id="navLinks">
+            <a href="Home.html">الرئيسية</a>
+            <a href="Services.html">الخدمات</a>
+            <a href="Portfolio.html">أعمالنا</a>
+            <a href="Blog.html">المدونة</a>
+            <a href="About.html">من نحن</a>
+            <a href="Contact.html" class="active">تواصل معنا</a>
+          </div>
+          <div class="nav-actions">
+            <a class="lang-link" href="../en/Contact.html">EN</a>
+            <button class="btn btn-primary small" id="openModalBtn">اطلب عرض سعر</button>
+          </div>
+        </div>
+      </nav>
+    </header>    <div class="modal" id="quoteModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Get a quote">
+        <button class="modal-close" id="closeModalBtn" aria-label="إغلاق">×</button>
+        <h3>Request a quote</h3>
+        <form id="quoteForm">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Project details
+            <textarea name="details" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Send request</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="container page-stack">
+      <section class="page-intro">
+        <p class="eyebrow">تواصل معنا</p>
+        <h1>لنتحدث عن مشروعك القادم.</h1>
+        <p>شاركنا بعض التفاصيل وسنتواصل معك بأفكار وخطوات تالية.</p>
+      </section>
+
+      <section class="contact-grid">
+        <div class="card">
+          <div class="card-body">
+            <form class="form-grid" id="contactForm">
+              <label>
+                الاسم
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                البريد الإلكتروني
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                الموضوع
+                <input type="text" name="subject" required />
+              </label>
+              <label>
+                الرسالة
+                <textarea name="message" required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">إرسال الرسالة</button>
+            </form>
+          </div>
+        </div>
+        <aside class="sidebar-card">
+          <h3>تفاصيل الاستوديو</h3>
+          <p>يسعدنا الإجابة عن أسئلتك حول التخطيط والتصميم ودعم الإطلاق.</p>
+          <ul class="feature-list">
+            <li>البريد الإلكتروني: alaa.majdi.saleh@gmail.com</li>
+            <li>الهاتف: +970 597 806379</li>
+            <li>مقرنا في فلسطين</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>استوديو برايت</h3>
+          <p>نصنع مواقع ويب مدروسة لمن يريدون التميز بوضوح وثقة.</p>
+        </div>
+        <div>
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="Privacy Policy.html">سياسة الخصوصية</a></li>
+            <li><a href="Return Policy.html">سياسة الاسترجاع</a></li>
+            <li><a href="Terms and Conditions.html">الشروط والأحكام</a></li>
+            <li><a href="FAQ.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/site-data.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        initSiteInteractions();
+      });
+    </script>
+  </body>
+</html>
+
+
+
