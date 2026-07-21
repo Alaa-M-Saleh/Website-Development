@@ -11,7 +11,7 @@
     <header class="site-header">
       <div class="top-bar">
         <div class="container top-bar-inner">
-          <span>تجارب ويب حديثة نصممها بعناية</span>
+          <span>Modern web experiences crafted with care</span>
           <div class="top-bar-links">
             <a href="tel:+970597806379">+970 597 806379</a>
             <a href="mailto:alaa.majdi.saleh@gmail.com">alaa.majdi.saleh@gmail.com</a>
@@ -22,28 +22,30 @@
       </div>
       <nav class="main-nav">
         <div class="container nav-inner">
-          <a class="brand" href="Home.html">استوديو برايت</a>
-          <div class="btn-group">
-            <button class="btn-group-item active">CSS</button>
-            <button class="btn-group-item" onclick="document.location.href = '../../bootstrap-dual-lang-site/index.html';">BOOTSTRAP</button>
-            <button class="btn-group-item" onclick="document.location.href = '../../tailwind-dual-lang-site/index.html';">TAILWIND</button>
+          <a class="brand" href="Home.html">Bright Studio</a>
+          <div class="nav-controls">
+            <div class="btn-group">
+              <button class="btn-group-item active">CSS</button>
+              <button class="btn-group-item" onclick="document.location.href = '../../bootstrap-dual-lang-site/index.html';">BOOTSTRAP</button>
+              <button class="btn-group-item" onclick="document.location.href = '../../tailwind-dual-lang-site/index.html';">TAILWIND</button>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
           </div>
-          <button class="nav-toggle" id="navToggle" aria-label="تبديل التنقل">☰</button>
-          <div class="nav-links" id="navLinks">
-            <a href="Home.html">الرئيسية</a>
-            <a href="Services.html">الخدمات</a>
-            <a href="Portfolio.html">أعمالنا</a>
-            <a href="Blog.html">المدونة</a>
-            <a href="About.html">من نحن</a>
-            <a href="Contact.html" class="active">تواصل معنا</a>
-          </div>
-          <div class="nav-actions">
-            <a class="lang-link" href="../en/Contact.html">EN</a>
-            <button class="btn btn-primary small" id="openModalBtn">اطلب عرض سعر</button>
+          <div class="nav-links" id="navLinks" aria-label="Primary navigation">
+            <a href="Home.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Blog.html">Blog</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html" class="active">Contact</a>
+            <div class="nav-actions">
+              <a class="lang-link" href="../en/Contact.html">EN</a>
+              <button class="btn btn-primary small" id="openModalBtn">اطلب عرض سعر</button>
+            </div>
           </div>
         </div>
       </nav>
-    </header>    <div class="modal" id="quoteModal" aria-hidden="true">
+    </header>   <div class="modal" id="quoteModal" aria-hidden="true">
       <div class="modal-card" role="dialog" aria-modal="true" aria-label="Get a quote">
         <button class="modal-close" id="closeModalBtn" aria-label="إغلاق">×</button>
         <h3>Request a quote</h3>
@@ -122,6 +124,10 @@
             <li><a href="Terms and Conditions.html">الشروط والأحكام</a></li>
             <li><a href="FAQ.html">الأسئلة الشائعة</a></li>
           </ul>
+        </div>
+        <div>
+          <h4>تواصل</h4>
+          <p><span dir="ltr">+970 597 806379</span><br />alaa.majdi.saleh@gmail.com</p>
         </div>
       </div>
     </footer>

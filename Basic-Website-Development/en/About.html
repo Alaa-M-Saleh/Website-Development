@@ -23,27 +23,29 @@
       <nav class="main-nav">
         <div class="container nav-inner">
           <a class="brand" href="Home.html">Bright Studio</a>
-          <div class="btn-group">
-            <button class="btn-group-item active">CSS</button>
-            <button class="btn-group-item" onclick="document.location.href = '../../bootstrap-dual-lang-site/index.html';">BOOTSTRAP</button>
-            <button class="btn-group-item" onclick="document.location.href = '../../tailwind-dual-lang-site/index.html';">TAILWIND</button>
+          <div class="nav-controls">
+            <div class="btn-group">
+              <button class="btn-group-item active">CSS</button>
+              <button class="btn-group-item" onclick="document.location.href = '../../bootstrap-dual-lang-site/index.html';">BOOTSTRAP</button>
+              <button class="btn-group-item" onclick="document.location.href = '../../tailwind-dual-lang-site/index.html';">TAILWIND</button>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
           </div>
-          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
-          <div class="nav-links" id="navLinks">
+          <div class="nav-links" id="navLinks" aria-label="Primary navigation">
             <a href="Home.html">Home</a>
             <a href="Services.html">Services</a>
             <a href="Portfolio.html">Portfolio</a>
             <a href="Blog.html">Blog</a>
             <a href="About.html" class="active">About</a>
             <a href="Contact.html">Contact</a>
-          </div>
-          <div class="nav-actions">
-            <a class="lang-link" href="../ar/About.html">AR</a>
-            <button class="btn btn-primary small" id="openModalBtn">Get a Quote</button>
+            <div class="nav-actions">
+              <a class="lang-link" href="../ar/About.html">AR</a>
+              <button class="btn btn-primary small" id="openModalBtn">Get a Quote</button>
+            </div>
           </div>
         </div>
       </nav>
-    </header>    
+    </header>
     <div class="modal" id="quoteModal" aria-hidden="true">
       <div class="modal-card" role="dialog" aria-modal="true" aria-label="Get a quote">
         <button class="modal-close" id="closeModalBtn" aria-label="Close">×</button>
@@ -111,6 +113,10 @@
             <li><a href="Terms and Conditions.html">Terms and Conditions</a></li>
             <li><a href="FAQ.html">FAQ</a></li>
           </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>+970 597 806379<br />alaa.majdi.saleh@gmail.com</p>
         </div>
       </div>
     </footer>

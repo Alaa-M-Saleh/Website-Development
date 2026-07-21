@@ -7,7 +7,7 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
-  <body>
+  <body class="page-home">
     <header class="site-header">
       <div class="top-bar">
         <div class="container top-bar-inner">
@@ -23,23 +23,25 @@
       <nav class="main-nav">
         <div class="container nav-inner">
           <a class="brand" href="Home.html">Bright Studio</a>
-          <div class="btn-group">
-            <button class="btn-group-item active">CSS</button>
-            <button class="btn-group-item" onclick="document.location.href = '../../bootstrap-dual-lang-site/index.html';">BOOTSTRAP</button>
-            <button class="btn-group-item" onclick="document.location.href = '../../tailwind-dual-lang-site/index.html';">TAILWIND</button>
+          <div class="nav-controls">
+            <div class="btn-group">
+              <button class="btn-group-item active">CSS</button>
+              <button class="btn-group-item" onclick="document.location.href = '../../bootstrap-dual-lang-site/index.html';">BOOTSTRAP</button>
+              <button class="btn-group-item" onclick="document.location.href = '../../tailwind-dual-lang-site/index.html';">TAILWIND</button>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
           </div>
-          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
-          <div class="nav-links" id="navLinks">
+          <div class="nav-links" id="navLinks" aria-label="Primary navigation">
             <a href="Home.html" class="active">Home</a>
             <a href="Services.html">Services</a>
             <a href="Portfolio.html">Portfolio</a>
             <a href="Blog.html">Blog</a>
             <a href="About.html">About</a>
             <a href="Contact.html">Contact</a>
-          </div>
-          <div class="nav-actions">
-            <a class="lang-link" href="../ar/Home.html">AR</a>
-            <button class="btn btn-primary small" id="openModalBtn">Get a Quote</button>
+            <div class="nav-actions">
+              <a class="lang-link" href="../ar/Home.html">AR</a>
+              <button class="btn btn-primary small" id="openModalBtn">Get a Quote</button>
+            </div>
           </div>
         </div>
       </nav>
@@ -156,10 +158,6 @@
       }
 
       document.addEventListener('DOMContentLoaded', function() {
-        populateServices('servicesGrid');
-        populatePosts('postsGrid');
-        initSiteInteractions();
-
         const prevButton = document.getElementById('carouselPrev');
         const nextButton = document.getElementById('carouselNext');
 
@@ -178,6 +176,14 @@
         }
 
         updateHomeCarousel();
+
+        try {
+          populateServices('servicesGrid');
+          populatePosts('postsGrid');
+          initSiteInteractions();
+        } catch (err) {
+          console.error('Site data failed to load:', err);
+        }
       });
     </script>
   </body>
